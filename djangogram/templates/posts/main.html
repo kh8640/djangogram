@@ -3,4 +3,22 @@
 
 {% block content %}
 메인페이지
+
+{% for post in posts %}
+<div>
+  {{posts.author.id}}
+  {{posts.author.username}}
+  {{posts.author.profile_photo}}
+  {{posts.id}}
+  {{posts.image}}
+  {{posts.caption}}
+
+  {% for comment in post.comment_post %}
+  <br> {{comment.contents}}
+  {% endfor %}
+
+</div>
+{% endfor %}
+
+
 {% endblock content %}
