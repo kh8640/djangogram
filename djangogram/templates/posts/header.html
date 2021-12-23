@@ -2,7 +2,7 @@
 <header>
   <div class="header-box">
     <div class="main-img">
-      <a href="#">
+      <a href="{% url 'posts:index' %}">
         로고
       </a>
     </div>
@@ -11,7 +11,7 @@
     </div>
     <div class="header-right">
       <div>
-        <a href="#">
+        <a href="{% url 'posts:post_create' %}">
           플러스
         </a>
       </div>
