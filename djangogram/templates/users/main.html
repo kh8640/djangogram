@@ -9,12 +9,15 @@
 로그인
 
 {% block content %}
-<form action="{% url 'users:main' %}" method="post">
-  {% csrf_token %}
-  <input type="input" name="username">
-  <input type="password" name="password">
-  <input type="submit" value="Login">
-</form>
-
-<a href="{% url 'users:signup' %}">회원가입</a>
+<div class="auth">
+  <form action="{% url 'users:main' %}" method="post">
+    {% csrf_token %}
+    <input type="input" name="username">
+    <input type="password" name="password">
+    <input type="submit" value="Login">
+  </form>
+</div>
+<div class="auth_link">
+  <a href="{% url 'users:signup' %}">회원가입</a>
+</div>
 {% endblock content %}
